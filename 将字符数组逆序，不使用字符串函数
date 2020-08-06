@@ -1,0 +1,33 @@
+int my_strlen(char* str)
+{
+    int count=0;
+  while(*str!='\0')
+  {
+       count++;
+        str++;
+  }
+    return count;
+}
+
+void reverse_string(char arr[],int size)
+{int temp=0;
+int left=0;
+int right=size-1;
+   while(left<right)
+  {
+     temp=arr[left];
+    arr[left]=arr[right];
+    arr[right]=temp;
+    left++;
+    right--;
+  }
+}
+
+ int main()
+ {
+ char arr[]="abcd" ;
+int size=my_strlen(arr);
+reverse_string(arr,size);
+ printf("%s",arr);
+   return 0;
+}
