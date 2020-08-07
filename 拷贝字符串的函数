@@ -1,22 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-void my_strcpy(char*dest,char*str)
+#include<assert.h>
+char* my_strcpy(char*dest,const char*str)
 {
-    while(*str!='\0')
+    char*ret=dest;
+    assert(dest!=NULL);  //断言
+    assert(str!=NULL);
+//把str指向的字符串拷贝到dest指向的空间，包含'\0'字符
+         while(*dest++=*str++)
     {
-          *dest=*str;
-         str++;
-          dest++;
+         ;
     }
-        *dest=*str;
+    return ret;//返回目的地的地址
 }
 
  int main()
  {
      char arr1[]="#########";
      char arr2[]="bit";
-     my_strcpy(arr1,arr2);
-     printf("%s",arr2);
+
+     printf("%s", my_strcpy(arr1,arr2));
    return 0;
 }
