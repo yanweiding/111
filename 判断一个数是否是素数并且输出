@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<math.h>
+int is_prime(int x)
+{
+    int j=0;
+for(j=2;j<=sqrt(x);j++)
+   {
+if(x%j==0)
+return 0;
+   }
+    return 1;
+}
+
+ int main()
+ {
+     int i=0;
+   scanf("%d",&i);
+      if(is_prime(i)==1)
+      printf("%d ",i);
+      if(is_prime(i)==0)
+      printf("不是素数 ");
+   return 0;
+}
