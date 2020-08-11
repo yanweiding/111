@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void  Print(char*str)
+{
+    printf("%s",str);
+}
+ int main()
+ {
+void (*p)(char*)=Print;
+(*p)("hello");
+   return 0;
+}
