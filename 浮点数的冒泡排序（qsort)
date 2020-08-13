@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int compare_float(const void*e1,const void*e2)
+{
+    return (int)(*(float*)e1-*(float*)e2); //强制类型转换再解引用
+}
+
+void test()
+{
+    float f[3]={8.5,7.0,6.1};
+    int size=sizeof(f)/sizeof(f[0]);
+    qsort(f,size,sizeof(f[0]),compare_float);
+    int i=0;
+    for(i=0;i<size;i++)
+    {
+        printf("%lf ",f[i]);
+    }
+}
+ int main()
+ {
+    test();
+     return 0;
+ }
