@@ -1,0 +1,8 @@
+char arr[]= "abcdef";
+printf("%d\n", sizeof(arr));       整个数组7个字符，7
+printf("%d\n", sizeof(arr+0));    首元素地址，4/8
+printf("%d\n", sizeof(*arr));   解引用，得到首元素的大小，1
+printf("%d\n", sizeof(arr[1]));   第二个元素的大小 1
+printf("%d\n", sizeof(&arr));   整个数组的地址，4/8
+printf("%d\n", sizeof(&arr+1));  跳过数组后的地址4/8
+printf("%d\n", sizeof(&arr[0]+1));   第二个元素地址4/8
