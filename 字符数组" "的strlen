@@ -1,0 +1,9 @@
+char arr[] ="abcdef";
+printf("%d\n", strlen(arr));     6
+printf("%d\n", strlen(arr+0));   首元素地址往后找字符串 6
+printf("%d\n", strlen(*arr));    首元素地址解引用得到a,96 错误
+printf("%d\n", strlen(arr[1]));   第二个元素的ascall值  错误
+printf("%d\n", strlen(&arr));   整个数组的地址往后找，6
+printf("%d\n", strlen(&arr+1));   跳过整个数组，但是不知道是什么，随机值
+printf("%d\n", strlen(&arr[0]+1));   跳过第一个元素，5
+
