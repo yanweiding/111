@@ -1,0 +1,16 @@
+一般数组名表示首元素的地址，有以下两个特例表示整个数组
+1.sizeof(a)
+2.&a表示整个数组的地址
+
+
+int a[] = {1,2,3,4};
+printf("%d\n",sizeof(a));  //整个数组的空间大小，16字节
+printf("%d\n",sizeof(a+0));  //a是首元素的地址  4 /8
+printf("%d\n",sizeof(*a));   a首元素地址，解引用是首元素 4 
+printf("%d\n",sizeof(a+1)); 跳过首元素，也就是第二个元素的地址 4/8
+printf("%d\n",sizeof(a[1]));   第二个元素的大小  4
+printf("%d\n",sizeof(&a));  整个数组的地址     那也是地址4/8
+printf("%d\n",sizeof(*&a));   整个数组解引用 16字节
+printf("%d\n",sizeof(&a+1));   跳过整个数组后的地址 4/8
+printf("%d\n",sizeof(&a[0]));   第一个元素的地址 4/8
+printf("%d\n\n",sizeof(&a[0]+1));   第二个元素的地址  4/8
