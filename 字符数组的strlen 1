@@ -1,0 +1,6 @@
+char arr[] ="abcdef";
+printf("%d\n", strlen(arr));
+printf("%d\n", strlen(arr+0));
+printf("%d\n", strlen(&arr));
+printf("%d\n", strlen(&arr+1));
+printf("%d\n", strlen(&arr[0]+1));
