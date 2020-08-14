@@ -1,0 +1,9 @@
+char arr[] = {'a','b','c','d','e','f'};
+
+printf("%d\n", strlen(arr));     找不到\0,随机值
+printf("%d\n", strlen(arr+0));   还是从第一个元素开始查找\0,随机值
+printf("%d\n", strlen(*arr));    解引用第一个元素，得到97,地址访问错误  
+printf("%d\n", strlen(arr[1]));   第二个元素b,98  访问错误
+printf("%d\n", strlen(&arr));  整个数组的地址，随机值
+printf("%d\n", strlen(&arr+1));   跳过整个数组再查找，比上面一个少6
+printf("%d\n", strlen(&arr[0]+1));   跳过第一个元素，比倒数第三行少1
