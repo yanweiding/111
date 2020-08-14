@@ -1,0 +1,8 @@
+char arr[] = {'a','b','c','d','e','f'};
+printf("%d\n", sizeof(arr));    整个数组，6个字符，一个字符一个字节 6
+printf("%d\n", sizeof(arr+0));   首元素的地址  4/8
+printf("%d\n", sizeof(*arr));    首元素解引用，为a，1
+printf("%d\n", sizeof(arr[1]));   第二个元素的大小，1
+printf("%d\n", sizeof(&arr));   整个数组的地址，4/8
+printf("%d\n", sizeof(&arr+1));   跳过整个数组的地址，4/8
+printf("%d\n", sizeof(&arr[0]+1));  跳过第一个元素的地址 ，4/8
