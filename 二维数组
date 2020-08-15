@@ -1,0 +1,12 @@
+int a[3][4] = {0};
+printf("%d\n",sizeof(a)); 整个数组 48
+printf("%d\n",sizeof(a[0][0]));  第一个元素的大小，整型4
+printf("%d\n",sizeof(a[0]));  数组名，整个第一行元素，4个，16
+printf("%d\n",sizeof(a[0]+1));   第一行第二个元素的地址  4/8
+printf("%d\n",sizeof(*(a[0]+1)));  第二个元素解引用  4
+printf("%d\n",sizeof(a+1));  第二行元素的地址，二维数组首元素是第一行 4/8
+printf("%d\n",sizeof(*(a+1)));  解引用第二行元素，16
+printf("%d\n",sizeof(&a[0]+1));  第二行地址 4/8   
+printf("%d\n",sizeof(*(&a[0]+1)));  第二行地址解引用，第二行大小 16
+printf("%d\n",sizeof(*a));   第一行元素地址解引用得到第一行元素 16
+printf("%d\n",sizeof(a[3]))； 第4行元素的大小，但是没有！！！ 16
