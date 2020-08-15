@@ -1,0 +1,8 @@
+char *p = "abcdef";
+printf("%d\n", sizeof(p));   p接收的是常量字符串首字母地址   4/8
+printf("%d\n", sizeof(p+1)); 得到字符b的地址 4/8
+printf("%d\n", sizeof(*p));  首字母地址进行解引用，得到首字母a,1
+printf("%d\n", sizeof(p[0]));  第一个字母 1    p[0]=*(p+0）
+printf("%d\n", sizeof(&p));   p的地址  4/8
+printf("%d\n", sizeof(&p+1));  p的地址+1 4/8
+printf("%d\n", sizeof(&p[0]+1)); b的地址  4/8
