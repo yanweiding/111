@@ -1,1 +1,8 @@
-
+char *p = "abcdef";
+printf("%d\n", strlen(p));   a的地址传进去，找到字符串  6
+printf("%d\n", strlen(p+1));   5
+printf("%d\n", strlen(*p));  错误，a
+printf("%d\n", strlen(p[0])); 错误，a
+printf("%d\n", strlen(&p)); p的地址， 随机  只是p指向 a的地址
+printf("%d\n", strlen(&p+1)); 随机
+printf("%d\n", strlen(&p[0]+1)); b的地址开始，5
